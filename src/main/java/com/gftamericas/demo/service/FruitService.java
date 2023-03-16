@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 public class FruitService {
 
-    private FruitRepository fruitRepository;
+    private final FruitRepository fruitRepository;
 
     public Fruit createFruit(Fruit fruit) {
         return fruitRepository.save(fruit);
