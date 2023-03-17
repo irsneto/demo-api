@@ -5,10 +5,7 @@ import com.gftamericas.demo.service.FruitService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,7 +21,7 @@ public class FruitController {
         return new ResponseEntity<Fruit>(save, HttpStatus.CREATED);
     }
 
-    @PostMapping("/list")
+    @GetMapping("/list")
     public ResponseEntity<List<Fruit>> listFruit(){
         final List<Fruit> fruitList = fruitService.getAll();
         return new ResponseEntity<List<Fruit>>(fruitList, HttpStatus.OK);
