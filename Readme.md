@@ -1,1 +1,1 @@
-# How to deploy to a Java Gradle Application to Cloud Run
+# How to deploy a Java Gradle Application to Cloud Run
